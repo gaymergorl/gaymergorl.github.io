@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pawstry House — Job Application</title>
+     <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+
+  <body>
+    <header>
+      <h1>Pawstry House</h1>
+    </header>
+
+    <nav>
+      <a href="#apply" aria-current="page">Apply</a>
+      <a href="about.html">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <main class="container">
+      <article id="posting" aria-labelledby="posting-title">
+        <h2 id="posting-title">Apply Now!</h2>
+
+        <!-- motivational quote (blockquote requirement) -->
+
+        <p>
+          Pawstry House is currently hiring for several fun and rewarding roles!
+        </p>  
+
+        <ul>
+          <li><strong>Pet Pastry Chef</strong> :Create healthy and adorable treats</li>
+          <li><strong>Delivery Driver</strong> :Bring fresh biscuits straight to tails</li>
+          <li><strong>Animal Nutrition Specialist</strong> :Help our bakers come up with new balanced recipes</li>
+          <li><strong>Store Assistant</strong> :Help customers find the perfect snack</li>
+        </ul>
+
+        <p>
+         Interested applicants may apply for any of the roles listed above using the form below.
+       </p>
+
+        <blockquote>
+          Our motto: “Make treats with love and every tail will wag.”
+        </blockquote>
+      </article>
+
+      <section id="apply" aria-labelledby="apply-title">
+        <h2 id="apply-title">Job Application</h2>
+
+    
+        <!-- FORM with action, method, autocomplete, ARIA -->
+        <form action="/submit" method="post" autocomplete="on" aria-label="Pawstry House job application form">
+          <p class="help">Fields marked with * are required.</p>
+
+          <!-- TEXT INPUTS (name + email) with name, placeholder, required, minlength, maxlength, pattern -->
+          <label for="fullname">Full Name *</label>
+          <input
+            type="text"
+            id="fullname"
+            name="fullname"
+            placeholder="e.g. Alex Kim"
+            required
+            minlength="2"
+            maxlength="100"
+            pattern="[A-Za-z\s\-']+"
+            title="Letters only. You may use spaces, hyphens, or apostrophes; 2–100 characters."
+            aria-required="true"          
+          >
+         
+          <label for="email">Email (text pattern) *</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="name@example.com"
+            required
+            minlength="6"
+            maxlength="100"
+            aria-required="true">
+          <div class="help">Format like: user@domain.com</div>
+
+          <!-- PASSWORD -->
+          <label for="password">Create Password *</label>
+          <input type="password" id="password" name="password" required minlength="8">
+
+          <!-- NUMBER (years of experience) -->
+          <label for="experience">Years of Baking/Related Experience</label>
+          <input type="number" id="experience" name="experience" min="0" max="40" placeholder="0–40">
+
+          <!-- RANGE (salary) with min, max, step + live output -->
+          <label for="salary">Expected Salary (€ per year)</label>
+          <input
+            type="range"
+            id="salary"
+            name="salary"
+            min="20000"
+            max="70000"
+            step="1000"
+            value="35000"
+            oninput="salaryOut.value = this.value"
+            aria-describedby="salary-help">
+          <span><output id="salaryOut">35000</output>€</span>
+          <div id="salary-help" class="help">Move the slider; value shows on the right.</div><br>
+
+          <!-- CHECKBOXES (skills) -->
+          <fieldset>
+          <legend><strong>Skills</strong></legend>
+            <label><input type="checkbox" name="skill_decor" value="decor"> Treat decorating</label>
+            <label><input type="checkbox" name="skill_baking" value="baking"> Baking</label>
+            <label><input type="checkbox" name="skill_driving" value="driving"> Class B driving license</label>
+            <label><input type="checkbox" name="skill_service" value="service"> Customer service</label>
+            <label for="other-skill">Other skill(s):</label>
+            <input type="text" id="other-skill" name="other_skill" placeholder="List any other relevant skills..." maxlength="100">
+            <div class="help">Optional: add any extra skills not listed above.</div>
+          </fieldset><br>
+        
+          <!-- RADIOS (job type) -->
+          <fieldset>
+          <legend><strong>Job Type *</strong></legend>
+          <label><input type="radio" name="jobtype" value="full" required> Full-time</label>
+          <label><input type="radio" name="jobtype" value="part"> Part-time</label>
+          <label><input type="radio" name="jobtype" value="contract"> Contract</label>
+          </fieldset>
+          
+          <!-- SELECT (positions) -->
+          <label for="position">Position Applying For</label>
+          <select id="position" name="position" required>
+            <option value="">-- Choose a role --</option>
+            <option>Pet Pastry Chef</option>
+            <option>Delivery Driver</option>
+            <option>Animal Nutrition Specialist</option>
+            <option>Store Assistant</option>
+          </select>
+
+          <!-- DATALIST (cities) -->
+          <label for="city">Preferred City</label>
+          <input list="city-list" id="city" name="city" placeholder="Type a city…">
+          <datalist id="city-list">
+            <option value="Helsinki">
+            <option value="Tampere">
+            <option value="Turku">
+            <option value="Oulu">
+            <option value="Espoo">
+          </datalist>
+          <div class="help">You can also type a different city.</div>
+
+          <!-- TEXTAREA -->
+          <label for="cover">Cover Letter</label>
+          <textarea id="cover" name="cover" rows="5" cols="40" placeholder="Tell us why you’re perfect for Pawstry House…"></textarea>
+
+          <!-- READONLY + DISABLED -->
+          <label for="appid">Application ID (readonly)</label>
+          <input type="text" id="appid" name="appid" value="PAW-2025-0001" readonly>
+
+          <label for="Referral">Referral Code (disabled)</label>
+          <input type="text" id="Referral" name="Referral" value="GOODDOG25" disabled>
+
+          <!-- SUBMIT -->
+          <input type="submit" value="Send Application">
+          <!-- end form -->
+        </form>
+      </section>
+
+
+      <aside>
+        <h3>Fun Fact</h3>
+        <p>Our treats are taste-tested by the happiest pups in town!</p>
+
+        <!-- EMBED: Pawstry House Menu PDF -->
+        <p><strong>Our Menu:</strong></p>
+        <embed 
+          src="images/pawstryhousemenu.pdf#zoom=page-width"
+          type="application/pdf">
+        <p>If your browser does not support PDF viewing,
+        <a href="images/pawstryhousemenu.pdf">you can download our menu here.</a></p>
+        <!-- EMBED -->
+    
+      </aside>
+    </main>
+
+    <footer id="contact">
+      <p>Contact: <a href="mailto:careers@pawstryhouse.example">careers@pawstryhouse.example</a></p>
+      <p>Main Office: 2015 Imaginary St, Helsinki, Finland</p>
+      <p>&copy; 2025 Pawstry House (fictional).</p>
+    </footer>
+  </body>
+</html>

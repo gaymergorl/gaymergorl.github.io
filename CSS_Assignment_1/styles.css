@@ -1,0 +1,226 @@
+
+
+/* Reset default browser styles so everything looks the same */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Set the main page background color and font */
+body {
+  background-color: #fceef2;
+  font-family: Arial, sans-serif;
+  color: #1f2937;
+}
+
+/* Uses Google Font 'Fredoka One' for h1 heading */
+h1 {
+  font-family: 'Fredoka One', cursive;
+  letter-spacing: 1px;
+  font-size: 5rem;
+}
+
+/*  Header Styling: The top header with a pink background and background image */
+header {
+  background: #ffb7c5 url('images/header-bg.png') no-repeat center top;
+  background-size: cover;
+  color: #2d2d2d;
+  text-align: center;
+  padding: 100px 20px;
+  /* This uses a background image that stays at the top center */
+}
+
+/*  Navigation (nav) */
+nav {
+  background: #fcd1da;
+  text-align: center;
+  padding: 10px;
+}
+
+/* This styles the links inside nav */
+nav a {
+  color: #2d2d2d;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 0 12px;
+}
+
+/* When the mouse goes over a link, the color changes */
+nav a:hover {
+  color: #ff4081;
+}
+
+/* Keep the main content centered and with some space on the sides */
+main {
+  width: 95%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* This container helps keep sections a good width on the page */
+.container {
+  margin: 20px auto;
+  max-width: 800px;
+  width: 100%;
+}
+
+/* White boxes around sections, articles, and side areas */
+section, article, aside {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  padding: 24px 32px;
+  margin-bottom: 20px;
+}
+
+/* This keeps the form centered and not too wide */
+form {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+/* Label and inputs */
+label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 6px;
+  border: 1px solid #cbd5e1;
+  border-radius: 4px;
+  font: inherit;
+  box-sizing: border-box;
+}
+
+/* Makes checkboxes and radio buttons stay small */
+input[type="checkbox"],
+input[type="radio"] {
+  width: auto;
+  margin-right: 6px;
+}
+
+/* Submit button styling */
+input[type="submit"] {
+  background: #ff7aa2 !important; /* demonstrates use of !important */
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  margin-top: 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+/* When the user hovers over the submit button, it changes color */
+input[type="submit"]:hover {
+  background: #e86a92;
+}
+
+/* This makes disabled inputs look lighter (not active) */
+input:disabled {
+  opacity: 0.6;
+}
+
+input:focus {
+  border-color: #ff7aa2;
+  outline: none;
+}
+
+/* This adds a border color when the user clicks into an input box */
+.help {
+  color: #6b7280;
+  font-size: 0.9rem;
+  margin-top: 4px;
+}
+
+/* This styles the small grey help text below inputs */
+fieldset {
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  padding: 16px 20px;
+  margin-bottom: 20px;
+}
+
+/* The title inside each fieldset */
+legend {
+  font-weight: bold;
+  padding: 0 8px;
+}
+
+/*  Blockquote  */
+blockquote {
+  border-left: 4px solid #ff7aa2;
+  padding-left: 10px;
+  font-style: italic;
+  background: #fff1f6;
+  color: #374151;
+}
+
+
+/*  Image and embed adjustments: Makes images fit on the page and stay centered */
+img {
+  display: block;
+  max-width: 400px;
+  width: 100%;
+  height: auto;
+  margin: 20px auto;
+}
+
+embed {
+  width: 100%;
+  height: 560px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+/* This hides anything with the class "hidden" */
+.hidden {
+  visibility: hidden;
+}
+
+/* This makes all main titles and headings use capital letters at the start */
+h1, h2, .menu {
+  text-transform: capitalize;
+}
+
+/* This styles the main title with a specific class */
+h1.title {
+  color: #333;
+}
+
+/* This styles email input fields */
+input[type="email"] {
+  border-color: #ffb7c5;
+}
+
+/* This styles elements with both "green" and "bold" classes */
+.green.bold {
+  color: green;
+  font-weight: bold;
+}
+
+/* This styles form labels inside a form with class "form" */
+.form label {
+  color: #333;
+}
+
+/* This demonstrates box model shorthand */
+.box {
+  margin: 6px 11px 4px 9px;
+  padding: 6px 10px 5px 12px;
+}
+
+/* Styles the footer with the same background image as the header */
+footer {
+  background: #ffb7c5 url('images/header-bg.png') no-repeat center bottom;
+  background-size: cover;
+  text-align: center;
+  padding: 60px 20px;
+  color: #2d2d2d;
+}
