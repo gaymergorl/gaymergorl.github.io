@@ -1,0 +1,416 @@
+/* === Page layout and style === */
+
+/* Smooth scrolling for the navigation links */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto', Arial, sans-serif;
+  color: #333333; /* hex color */
+  line-height: 1.6;
+  background-color: #ffffff;
+}
+
+/* position: sticky + z-index + top */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #000000; 
+  border-bottom: 1px solid #222222;
+  padding: 2rem 6vw;      
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-family: 'Playfair Display', 'Times New Roman', serif;
+  font-size: 1.6rem;        
+  letter-spacing: 0.25rem;
+  text-transform: uppercase;
+  color: white;           
+}
+
+/* Navigation links: inline-block display */
+.main-nav .nav-link {
+  text-decoration: none;
+  margin-left: 2rem;
+  font-size: 1rem;            
+  letter-spacing: 0.18rem;
+  text-transform: uppercase;
+  color: white;                
+  display: inline-block;
+}
+
+.main-nav .nav-link:hover {
+  color: black;
+}
+
+.nav-link-active {
+  font-weight: 600;
+  border-bottom: 2px solid white; 
+  color: white;
+}
+
+/* === Homepage === */
+
+.home-main {
+  padding: 4rem 8vw;
+}
+
+.home-image {
+  display: grid;
+  grid-template-columns: 1.2fr 1.5fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.18rem;
+  font-size: 0.8rem;
+}
+
+.home-title {
+  font-family: 'Playfair Display', 'Times New Roman', serif;
+  font-size: 2.3rem;
+  margin-top: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+.home-quote {
+  font-style: italic; /* font-style requirement */
+  font-weight: 400;
+  margin-bottom: 1.2rem;
+}
+
+.home-intro {
+  word-spacing: 0.1rem; /* word spacing requirement */
+  margin-bottom: 0.8rem;
+}
+
+/* button-style link */
+.button-link {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.8rem 1.6rem;
+  border: 1px solid black;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.15rem;
+  font-size: 0.75rem;
+  color: black;
+}
+
+/* position: static */
+.static-example {
+  position: static; /* default positioning, noted for the assignment */
+}
+
+/* Image wrapper using relative positioning */
+.home-image-wrapper {
+  position: relative; /* used with animation and potential overlays */
+}
+
+/* Image animation: appears from the right */
+.home-image {
+  width: 100%;
+  display: block; 
+  object-fit: cover;
+}
+
+/* Keyframes for slide-in-right animation */
+@keyframes slideRightFade {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Apply the animation */
+.slide-in-right {
+  animation: slideRightFade 1.2s ease-out;
+}
+
+/* === Gallery page === */
+
+.gallery-main {
+  padding: 3rem 8vw 5rem;
+}
+
+.page-heading {
+  margin-bottom: 2rem;
+}
+
+.page-title {
+  font-family: 'Playfair Display', 'Times New Roman', serif;
+  font-size: 2rem;
+  margin-bottom: 0.2rem;
+}
+
+.page-subtitle {
+  color: #666666;
+}
+
+/* Float section (float and clear requirement) */
+.float-section {
+  margin: 3rem 0 2rem;
+  font-size: 0.95rem;
+}
+
+.float-image {
+  float: left; /* float requirement */
+  width: 280px;
+  margin-right: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.float-text {
+  /* nothing special, text wraps around floated image */
+}
+
+/* Clearfix div resets the normal flow below the float */
+.clearfix {
+  clear: both; /* clear requirement */
+}
+
+/* Mini navigation */
+.mini-nav-wrapper {
+  margin: 3rem 0 1.5rem;
+  text-align: center;
+}
+
+.mini-nav .mini-link {
+  margin: 0 1.8rem;
+  text-decoration: none;
+  text-transform: uppercase; /* text-transform requirement */
+  letter-spacing: 0.16rem;  /* letter-spacing requirement */
+  font-size: 0.8rem;
+  color: #777777;
+}
+
+.mini-nav .mini-link:hover {
+  color: black;
+}
+
+.mini-link-active {
+  font-weight: bold; /* keyword font-weight */
+  border-bottom: 2px solid black;
+}
+
+/* Gallery sections */
+.gallery-section {
+  margin-bottom: 4rem;
+}
+
+.section-title {
+  font-family: 'Playfair Display', 'Times New Roman', serif;
+  font-size: 1.4rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Gallery grid using inline-block cards */
+.gallery-grid {
+  font-size: 0; /* remove whitespace gaps between inline-blocks */
+}
+
+/* Each gallery-card: inline-block (display requirement), relative for caption */
+.gallery-card {
+  position: relative; /* relative positioning container */
+  display: inline-block; /* display: inline-block requirement */
+  width: 31%;
+  margin: 0 1% 1.5rem 0;
+  vertical-align: top;
+  background-color: #f6f6f6;
+  overflow: hidden;
+}
+
+/* Ensure last item wraps nicely */
+.gallery-card img {
+  width: 100%;
+  display: block;
+}
+
+/* Caption overlay using absolute positioning and bottom/left */
+.gallery-caption {
+  position: absolute; /* absolute positioning requirement */
+  left: 0;  /* left property */
+  bottom: 0; /* bottom property */
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.55); /* rgba opacity requirement */
+  padding: 0.4rem 0.8rem;
+  box-sizing: border-box;
+}
+
+.artist-name {
+  color: white;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18rem;
+}
+
+/* === Footer === */
+
+.site-footer {
+  background-color: hsl(0, 0%, 96%); /* hsl color requirement */
+  padding: 1.5rem 8vw 2rem;
+  border-top: 1px solid #eaeaea;
+  text-align: center; /* text-align requirement */
+}
+
+.footer-inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0.75rem;
+}
+
+/* Footer links displayed inline (display: inline requirement) */
+.footer-links li {
+  display: inline;
+  margin: 0 0.9rem;
+}
+
+.footer-links a {
+  text-decoration: none;
+  font-size: 0.8rem;
+  color: gray; /* named color requirement */
+}
+
+.footer-links a:hover {
+  color: black;
+}
+
+.footer-note {
+  font-size: 0.78rem;
+  color: #666666;
+}
+
+.muted {
+  color: #999999;
+}
+
+/* Fixed info bar at bottom using position: fixed and right property on button */
+.cookie-bar {
+  position: fixed; /* fixed positioning requirement */
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #222222;
+  color: white;
+  font-size: 0.75rem;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  z-index: 1500;
+}
+
+/* Back-to-top button demonstrating right + bottom properties */
+.back-to-top {
+  position: fixed;
+  right: 1.2rem; /* right property */
+  bottom: 3.2rem;
+  text-decoration: none;
+  background-color: #000000;
+  color: white;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 999px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+}
+
+/* Small shadow using an rgb color variant */
+.back-to-top:hover {
+  box-shadow: 0 0 8px rgb(0, 0, 0);
+}
+
+/* === Responsive tweaks for smaller screens like mobile === */
+@media (max-width: 900px) {
+  .home-image {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-card {
+    width: 48%;
+  }
+}
+
+@media (max-width: 600px) {
+  .site-header {
+    padding: 1rem 1.2rem;
+  }
+
+  .gallery-card {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .float-image {
+    float: none;
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .back-to-top {
+    right: 0.7rem;
+    bottom: 3rem;
+  }
+}
+/* === Lightbox to make images pop out when clicked on === */
+.lightbox {
+  position: fixed;
+  top: 0; 
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.85);
+  display: none; /* hidden by default */
+  justify-content: center;
+  align-items: center;
+  z-index: 3000;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.lightbox:target {
+  display: flex; /* show only when clicked */
+}
+
+.lightbox-img {
+  max-width: 90%;
+  max-height: 90%;
+  border: 3px solid white;
+  box-shadow: 0 0 25px rgba(0,0,0,0.6);
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  text-decoration: none;
+  color: white;
+  font-size: 3rem;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.lightbox-close:hover {
+  color: #cccccc;
+}
+
+.popup-link img {
+  cursor: zoom-in;
+}

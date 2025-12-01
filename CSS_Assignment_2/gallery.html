@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>China Art Gallery – Gallery</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- External stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body id="top">
+  <header class="site-header">
+    <div class="logo">China Art Gallery</div>
+    <nav class="main-nav">
+      <a href="index.html" class="nav-link">About</a>
+      <a href="gallery.html" class="nav-link nav-link-active">Gallery</a>
+    </nav>
+  </header>
+
+  <main class="gallery-main">
+    <section class="page-heading">
+      <h1 class="page-title">China in Three Views</h1>
+      <p class="page-subtitle">
+        Landscapes, food, and culture — a small virtual exhibition built with HTML and CSS.
+      </p>
+    </section>
+
+    <!-- Floated image + text section to satisfy float / clear requirement -->
+    <section class="float-section">
+      <img src="images/View1.jpg" alt="Forbidden City" class="float-image">
+      <div class="float-text">
+        <h2>Floating into the Gallery</h2>
+        <p>
+          This small section demonstrates the classic CSS <strong>float</strong> property.
+          The Forbidden City image floats to the left while this text wraps around it,
+          just like in a magazine layout. Below this section, the gallery layout
+          switches to modern inline-block cards.
+        </p>
+      </div>
+      <div class="clearfix"></div>
+    </section>
+
+    <!-- Mini navigation -->
+    <section class="mini-nav-wrapper">
+      <nav class="mini-nav">
+        <a href="#landscape" class="mini-link mini-link-active">LANDSCAPE</a>
+        <a href="#food" class="mini-link">FOOD</a>
+        <a href="#culture" class="mini-link">CULTURE</a>
+      </nav>
+    </section>
+
+    <!-- LANDSCAPE SECTION -->
+    <section id="landscape" class="gallery-section">
+      <h2 class="section-title">Landscape</h2>
+
+      <div class="gallery-grid">
+        <article class="gallery-card">
+          <a href="#view1" class="popup-link">
+            <img src="images/View1.jpg" alt="Forbidden City">
+          </a>
+          <div class="gallery-caption">
+            <span class="artist-name">Forbidden City</span>
+          </div>
+        </article>
+
+        <article class="gallery-card">
+          <a href="#view2" class="popup-link">
+            <img src="images/View2.jpg" alt="Shanghai Skyline">
+          </a>
+          <div class="gallery-caption">
+            <span class="artist-name">Shanghai Skyline</span>
+          </div>
+        </article>
+
+        <article class="gallery-card">
+          <a href="#view3" class="popup-link">
+            <img src="images/View3.jpg" alt="Chongqing Bridge Skyline">
+          </a>
+          <div class="gallery-caption">
+            <span class="artist-name">Chongqing Bridge Skyline</span>
+          </div>
+        </article>
+
+        <article class="gallery-card">
+          <a href="#view4" class="popup-link">
+            <img src="images/View4.jpg" alt="Old Village Street">
+          </a>
+          <div class="gallery-caption">
+            <span class="artist-name">Old Village Street</span>
+          </div>
+        </article>
+
+        <article class="gallery-card">
+          <a href="#view5" class="popup-link">
+            <img src="images/View5.jpg" alt="Yellow Mountains">
+          </a>
+          <div class="gallery-caption">
+            <span class="artist-name">Yellow Mountains</span>
+          </div>
+        </article>
+
+        <article class="gallery-card">
+          <a href="#view6" class="popup-link">
+            <img src="images/View6.jpg" alt="Great Wall of China">
+          </a>
+          <div class="gallery-caption">
+            <span class="artist-name">Great Wall of China</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- FOOD SECTION -->
+    <section id="food" class="gallery-section">
+      <h2 class="section-title">Food</h2>
+
+      <div class="gallery-grid">
+        <article class="gallery-card">
+          <a href="#food1" class="popup-link">
+            <img src="images/Food1.jpg" alt="Hotpot">
+          </a>
+          <div class="gallery-caption">
+            <span class="artist-name">Hotpot</span>
+          </div>
+        </article>
+
+        <article class="gallery-card">
+          <a href="#food2" class="popup-link">
+            <img src="images/Food2.jpg" alt="Soup Dumplings">
+          </a>
+          <div class="gallery-caption">
+            <span class="artist-name">Soup Dumplings</span>
+          </div>
+        </article>
+
+        <article class="gallery-card">
+          <a href="#food3" class="popup-link">
+            <img src="images/Food3.jpg" alt="Noodle Making">
+          </a>
+          <div class="gallery-caption">
+            <span class="artist-name">Noodle Making</span>
+          </div>
+        </article>
+
+        <article class="gallery-card">
+          <a href="#food4" class="popup-link">
+            <img src="images/Food4.jpg" alt="Fried Rice">
+          </a>
+          <div class="gallery-caption">
+            <span class="artist-name">Fried Rice</span>
+          </div>
+        </article>
+
+        <article class="gallery-card">
+          <a href="#food5" class="popup-link">
+            <img src="images/Food5.jpg" alt="Broccoli Stir-Fry">
+          </a>
+          <div class="gallery-caption">
+            <span class="artist-name">Broccoli Stir-Fry</span>
+          </div>
+        </article>
+
+        <article class="gallery-card">
+          <a href="#food6" class="popup-link">
+            <img src="images/Food6.jpg" alt="Tanghulu">
+          </a>
+          <div class="gallery-caption">
+            <span class="artist-name">Tanghulu</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- CULTURE SECTION -->
+    <section id="culture" class="gallery-section">
+      <h2 class="section-title">Culture</h2>
+
+      <div class="gallery-grid">
+        <article class="gallery-card">
+          <a href="#culture1" class="popup-link">
+            <img src="images/Culture1.jpg" alt="Panda">
+          </a>
+          <div class="gallery-caption">
+            <span class="artist-name">Panda</span>
+          </div>
+        </article>
+
+        <article class="gallery-card">
+          <a href="#culture2" class="popup-link">
+            <img src="images/Culture2.jpg" alt="Red Panda">
+          </a>
+          <div class="gallery-caption">
+            <span class="artist-name">Red Panda</span>
+          </div>
+        </article>
+
+        <article class="gallery-card">
+          <a href="#culture3" class="popup-link">
+            <img src="images/Culture3.jpg" alt="Calligraphy">
+          </a>
+          <div class="gallery-caption">
+            <span class="artist-name">Calligraphy</span>
+          </div>
+        </article>
+
+        <article class="gallery-card">
+          <a href="#culture4" class="popup-link">
+            <img src="images/Culture4.jpg" alt="Chinese Chess">
+          </a>
+          <div class="gallery-caption">
+            <span class="artist-name">Chinese Chess</span>
+          </div>
+        </article>
+
+        <article class="gallery-card">
+          <a href="#culture5" class="popup-link">
+            <img src="images/Culture5.jpg" alt="Guardian Lion Statue">
+          </a>
+          <div class="gallery-caption">
+            <span class="artist-name">Guardian Lion Statue</span>
+          </div>
+        </article>
+
+        <article class="gallery-card">
+          <a href="#culture6" class="popup-link">
+            <img src="images/Culture6.jpg" alt="Lanterns During Chinese New Year">
+          </a>
+          <div class="gallery-caption">
+            <span class="artist-name">Lanterns During Chinese New Year</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- LIGHTBOX POPUPS (all images) -->
+    <!-- Views -->
+    <div class="lightbox" id="view1">
+      <a href="#!" class="lightbox-close">×</a>
+      <img src="images/View1.jpg" alt="Forbidden City" class="lightbox-img">
+    </div>
+
+    <div class="lightbox" id="view2">
+      <a href="#!" class="lightbox-close">×</a>
+      <img src="images/View2.jpg" alt="Shanghai Skyline" class="lightbox-img">
+    </div>
+
+    <div class="lightbox" id="view3">
+      <a href="#!" class="lightbox-close">×</a>
+      <img src="images/View3.jpg" alt="Chongqing Bridge Skyline" class="lightbox-img">
+    </div>
+
+    <div class="lightbox" id="view4">
+      <a href="#!" class="lightbox-close">×</a>
+      <img src="images/View4.jpg" alt="Old Village Street" class="lightbox-img">
+    </div>
+
+    <div class="lightbox" id="view5">
+      <a href="#!" class="lightbox-close">×</a>
+      <img src="images/View5.jpg" alt="Yellow Mountains" class="lightbox-img">
+    </div>
+
+    <div class="lightbox" id="view6">
+      <a href="#!" class="lightbox-close">×</a>
+      <img src="images/View6.jpg" alt="Great Wall of China" class="lightbox-img">
+    </div>
+
+    <!-- Food -->
+    <div class="lightbox" id="food1">
+      <a href="#!" class="lightbox-close">×</a>
+      <img src="images/Food1.jpg" alt="Hotpot" class="lightbox-img">
+    </div>
+
+    <div class="lightbox" id="food2">
+      <a href="#!" class="lightbox-close">×</a>
+      <img src="images/Food2.jpg" alt="Soup Dumplings" class="lightbox-img">
+    </div>
+
+    <div class="lightbox" id="food3">
+      <a href="#!" class="lightbox-close">×</a>
+      <img src="images/Food3.jpg" alt="Noodle Making" class="lightbox-img">
+    </div>
+
+    <div class="lightbox" id="food4">
+      <a href="#!" class="lightbox-close">×</a>
+      <img src="images/Food4.jpg" alt="Fried Rice" class="lightbox-img">
+    </div>
+
+    <div class="lightbox" id="food5">
+      <a href="#!" class="lightbox-close">×</a>
+      <img src="images/Food5.jpg" alt="Broccoli Stir-Fry" class="lightbox-img">
+    </div>
+
+    <div class="lightbox" id="food6">
+      <a href="#!" class="lightbox-close">×</a>
+      <img src="images/Food6.jpg" alt="Tanghulu" class="lightbox-img">
+    </div>
+
+    <!-- Culture -->
+    <div class="lightbox" id="culture1">
+      <a href="#!" class="lightbox-close">×</a>
+      <img src="images/Culture1.jpg" alt="Panda" class="lightbox-img">
+    </div>
+
+    <div class="lightbox" id="culture2">
+      <a href="#!" class="lightbox-close">×</a>
+      <img src="images/Culture2.jpg" alt="Red Panda" class="lightbox-img">
+    </div>
+
+    <div class="lightbox" id="culture3">
+      <a href="#!" class="lightbox-close">×</a>
+      <img src="images/Culture3.jpg" alt="Calligraphy" class="lightbox-img">
+    </div>
+
+    <div class="lightbox" id="culture4">
+      <a href="#!" class="lightbox-close">×</a>
+      <img src="images/Culture4.jpg" alt="Chinese Chess" class="lightbox-img">
+    </div>
+
+    <div class="lightbox" id="culture5">
+      <a href="#!" class="lightbox-close">×</a>
+      <img src="images/Culture5.jpg" alt="Guardian Lion Statue" class="lightbox-img">
+    </div>
+
+    <div class="lightbox" id="culture6">
+      <a href="#!" class="lightbox-close">×</a>
+      <img src="images/Culture6.jpg" alt="Lanterns During Chinese New Year" class="lightbox-img">
+    </div>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <ul class="footer-links">
+        <li><a href="index.html">About</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><span class="muted">Student project · Laurea</span></li>
+      </ul>
+      <p class="footer-note">
+        © 2025 Hsieh PeiShan (Max). All images from Pixabay. Created for CSS Hands-on Assignment 2.
+      </p>
+    </div>
+  </footer>
+
+  <div class="cookie-bar">
+    This is a student website for a web development course. No real cookies.
+  </div>
+
+  <a href="#top" class="back-to-top">↑</a>
+</body>
+</html>

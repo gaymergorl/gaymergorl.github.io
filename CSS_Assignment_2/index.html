@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Art Gallery – Home</title>
+
+  <!-- Google Fonts for typography -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- External stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Small internal CSS example -->
+  <style>
+    /* Internal CSS: adjust the homepage quote color */
+    .home-quote {
+      color: hsl(0, 0%, 20%);
+    }
+  </style>
+</head>
+<body>
+  <!-- Sticky header used on both pages -->
+  <header class="site-header">
+    <div class="logo">China Art Gallery</div>
+    <nav class="main-nav">
+      <a href="index.html" class="nav-link nav-link-active">About</a>
+      <a href="gallery.html" class="nav-link">Gallery</a>
+    </nav>
+  </header>
+
+  <main class="home-main">
+    <section class="home-image">
+      <div class="home-text static-example">
+        <p class="eyebrow">Now on view</p>
+        <h1 class="home-title">A Small Love Letter to China</h1>
+
+        <p class="home-quote">
+          “You Met Me At A Very Chinese Time In My Life.”
+        </p>
+
+        <p class="home-intro">
+          I have never been to 
+          <!-- Inline CSS example -->
+          <span style="color: red;">China</span>, 
+          but I have always wanted to go. This mini gallery is my way of
+          travelling through images. It showcases cities, food,
+          and glimpses of culture.
+        </p>
+
+        <p class="home-intro">
+          All photographs in this project are royalty-free and come from Pixabay. This site is built for learning HTML and CSS.
+        </p>
+
+        <a href="gallery.html" class="button-link">Enter the Gallery</a>
+      </div>
+
+      <div class="home-image-wrapper">
+        <!-- Image that slides in from the right on load -->
+        <img src="images/Home.jpg" alt="Art gallery inspired Chinese scene" class="home-image slide-in-right">
+      </div>
+    </section>
+  </main>
+
+  <!-- styled footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <ul class="footer-links">
+        <li><a href="index.html">About</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><span class="muted">Student project · Laurea</span></li>
+      </ul>
+      <p class="footer-note">
+        © 2025 Hsieh PeiShan (Max). All images from Pixabay. Created for CSS Hands-on Assignment 2.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Fixed cookie/info bar at bottom (position: fixed requirement) -->
+  <div class="cookie-bar">
+    This is a student website for a web development course. No real cookies.
+  </div>
+</body>
+</html>
