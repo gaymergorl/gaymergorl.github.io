@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Testimonials</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">Bandit's Portfolio</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarMenu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarMenu">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="testimonials.html"
+                >Testimonials</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- PAGE HEADER -->
+    <header class="text-center py-5 mt-5 bg-light">
+      <h1 class="fw-bold">What My Family Says</h1>
+      <p class="text-muted">A few kind words from the Heelers</p>
+    </header>
+
+    <!-- CAROUSEL -->
+    <section class="container py-5">
+      <div
+        id="testimonialCarousel"
+        class="carousel slide"
+        data-bs-ride="carousel"
+        data-bs-interval="2000"
+      >
+        <div class="carousel-inner">
+          <!-- SLIDE 1 -->
+          <div class="carousel-item active">
+            <div class="row align-items-center">
+              <div class="col-md-5 text-center">
+                <img
+                  src="images/bluey.jpg"
+                  class="d-block w-100 testimonial-img"
+                  alt="Bluey"
+                />
+              </div>
+
+              <div class="col-md-7">
+                <h3>Bluey</h3>
+                <p class="lead">
+                  “Dad always plays with us like it's the best idea ever. He
+                  jumps into every silly game and somehow still has energy!”
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- SLIDE 2 -->
+          <div class="carousel-item">
+            <div class="row align-items-center">
+              <div class="col-md-5 text-center">
+                <img
+                  src="images/bingo.jpg"
+                  class="d-block w-100 testimonial-img"
+                  alt="Bingo"
+                />
+              </div>
+
+              <div class="col-md-7">
+                <h3>Bingo</h3>
+                <p class="lead">
+                  “Dad makes me feel brave. He helps me try new things, and he
+                  does the funniest dances when I ask!”
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- SLIDE 3 -->
+          <div class="carousel-item">
+            <div class="row align-items-center">
+              <div class="col-md-5 text-center">
+                <img
+                  src="images/chilli.jpg"
+                  class="d-block w-100 testimonial-img"
+                  alt="Chilli"
+                />
+              </div>
+
+              <div class="col-md-7">
+                <h3>Chilli</h3>
+                <p class="lead">
+                  “Bandit is a wonderful dad and husband. Playful, patient,
+                  kind, and always teaching the kids something meaningful.”
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CAROUSEL CONTROLS WITH DARK ARROWS -->
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#testimonialCarousel"
+          data-bs-slide="prev"
+        >
+          <span
+            class="carousel-control-prev-icon"
+            style="filter: invert(1)"
+          ></span>
+        </button>
+
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#testimonialCarousel"
+          data-bs-slide="next"
+        >
+          <span
+            class="carousel-control-next-icon"
+            style="filter: invert(1)"
+          ></span>
+        </button>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-dark text-white text-center py-3">
+      <p>
+        This is a student bootstrap project for a portfolio of Bandit Heeler,
+        inspired by the show "Bluey". All characters and images are owned by
+        Ludo Studio and the Australian Broadcasting Corporation (ABC).
+      </p>
+    </footer>
+
+    <!-- BOOTSTRAP JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
