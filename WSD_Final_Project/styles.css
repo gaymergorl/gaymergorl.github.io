@@ -1,0 +1,130 @@
+/* Basic page setup */
+body {
+  padding-top: 70px;
+  font-family: Arial, sans-serif;
+}
+
+/* Hero section */
+.hero {
+  height: 70vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+
+/* Make hero text black and readable */
+.hero h1,
+.hero p {
+  color: black !important;
+  text-shadow: none !important;
+}
+
+.hero-highlight {
+  background: rgba(255, 255, 255, 0.85);
+  color: black !important;
+  padding: 8px 18px;
+  border-radius: 6px;
+  display: inline-block;
+}
+
+.hero {
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.3); /* adjust transparency */
+  z-index: 1;
+}
+
+.hero * {
+  position: relative;
+  z-index: 2; /* ensure text is above overlay */
+}
+
+/* Card styling for skills + projects */
+.card {
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+}
+
+.card-img-top {
+  height: 260px;
+  object-fit: cover;
+}
+
+/* Testimonial images */
+.testimonial-img {
+  height: 300px;
+  object-fit: contain;
+  background-color: #fff;
+}
+
+/* Titles */
+h2 {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Footer */
+footer {
+  margin-top: 40px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero {
+    height: 50vh;
+  }
+
+  .testimonial-img,
+  .card-img-top {
+    height: 200px;
+  }
+}
+
+/* Carousel adjustments */
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 1;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1); /* dark arrows */
+  width: 35px;
+  height: 35px;
+}
+
+.carousel-control-prev {
+  left: 0;
+}
+
+.carousel-control-next {
+  right: 0;
+}
+
+/* Add side padding so arrows don't touch image/text */
+#testimonialCarousel .carousel-item .row {
+  padding: 0 80px;
+}
+
+/* Center the content area so arrows have equal spacing */
+#testimonialCarousel .carousel-item .row {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
