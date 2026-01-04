@@ -37,11 +37,17 @@ function getSelectedValue(name) {
   return el ? Number(el.value) : null;
 }
 
-function allAnswered() {
+
+function findUnansweredQuestions() {
+  const missing = [];
+
   for (let i = 1; i <= 12; i++) {
-    if (getSelectedValue(`q${i}`) === null) return false;
+    if (getSelectedValue(`q${i}`) === null) {
+      missing.push(`q${i}`);
+    }
   }
-  return true;
+
+  return missing;
 }
 
 function computeScores() {
@@ -269,10 +275,40 @@ function showResults() {
   const error = document.getElementById("quizError");
   error.classList.add("d-none");
 
-  if (!allAnswered()) {
-    error.classList.remove("d-none");
-    document.getElementById("results").classList.remove("d-none");
-    document.getElementById("results").scrollIntoView({ behavior: "smooth" });
+  const missing = findUnansweredQuestions();
+
+  // Remove previous highlights
+  document
+    .querySelectorAll(".question-block")
+    .forEach((q) => q.classList.remove("border", "border-danger"));
+
+if (missing.length > 0) {
+  const numbers = missing.map(q => q.replace("q", ""));
+  error.textContent =
+    `You missed question${numbers.length > 1 ? "s" : ""}: ${numbers.join(", ")}. Please answer before viewing results.`;
+
+  error.classList.remove("d-none");
+
+    // Highlight missing questions
+    missing.forEach((qName) => {
+      const input = document.querySelector(`input[name="${qName}"]`);
+      if (!input) return;
+      const block = input.closest(".question-block");
+      if (block) {
+        block.classList.add("border", "border-danger");
+      }
+    });
+
+    // Scroll to the first missing question
+    const firstInput = document.querySelector(
+      `input[name="${missing[0]}"]`
+    );
+    if (firstInput) {
+      firstInput
+        .closest(".question-block")
+        .scrollIntoView({ behavior: "smooth", block: "center" });
+    }
+
     return;
   }
 
